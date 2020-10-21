@@ -35,7 +35,7 @@ MY SUPPORT GROUP IS @anie_support
 
 You can find the list of available commands with /help
 
-MY  CHANNEL IS @anie_news
+Support group is [here](t.me/anie_support)
 
 
 
