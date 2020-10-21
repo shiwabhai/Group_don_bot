@@ -31,17 +31,17 @@ Hey there! My name is *{}*.
 
 I am an Anime themed group management bot with some fun extras ;)
 
-MY SUPPORT GROUP IS @BotLabSupport
+MY SUPPORT GROUP IS @anie_support
 
 You can find the list of available commands with /help
 
-MY  CHANNEL IS @BotLabUpdates
+MY  CHANNEL IS @anie_news
 
-Made By @Darkpokefan.
+
 
 """
 
-BOT_IMG = "https://telegra.ph/file/2354b783c61e292ff93ed.jpg"
+BOT_IMG = 
 
 
 HELP_STRINGS = """
