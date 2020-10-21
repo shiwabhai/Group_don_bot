@@ -27,35 +27,28 @@ from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
 
-Hi {}, My name is {} !
-
-I am saber anime themed bot 
-
-𝓘 𝓪𝓶 𝓽𝓱𝓮 𝓼𝔀𝓸𝓻𝓭 𝓱𝓮𝓻𝓸  𝓸𝓷𝓮 𝓸𝓯 𝓽𝓱𝓮 𝓗𝓮𝓻𝓸 𝓸𝓯 𝓱𝓸𝓵𝔂 𝓰𝓻𝓪𝓲𝓵 𝔀𝓪𝓻 𝓘 𝓪𝓶 𝓼𝓾𝓶𝓶𝓸𝓷𝓮𝓭 𝓫𝔂 𝓶𝔂 𝓶𝓪𝓼𝓽𝓮𝓻 𝓽𝓸 𝓱𝓮𝓵𝓹 𝓱𝓲𝓶
-
-I HOPE I WILL ABLE TO MAINTAIN YOUR GROUP
-
-MY SUPPORT GROUP IS @fateunion
-
-HIT HELP FOR COMMAND /help.
+Hi {}, my name is {}! 
+I am an Anime themed group management bot with some fun extras ;)
+You can find the list of available commands with /help
 
 """
 
-BOT_IMG = "https://telegra.ph/file/10cc43e697dec365f0775.jpg"
+BOT_IMG = "https://telegra.ph/file/2354b783c61e292ff93ed.jpg"
 
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+Hey there! My name is *{}*.
+I'm a part of Pokemon
+Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
-
+ • /help: PM's you this message.
+ • /help <module name>: PM's you info about that module.
+ • /donate: information on how to donate!
+ • /settings:
+   • in PM: will send you your settings for all supported modules.
+   • in a group: will redirect you to pm, with all that chat's settings.
 
 {}
 And the following:
@@ -152,9 +145,29 @@ def start(bot: Bot, update: Update, args: List[str]):
             update.effective_message.reply_photo(
                 BOT_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="CLICK HERE TO SUMMON ME ",
-                                                                       url="t.me/{}?startgroup=true".format(bot.username))]]))
-
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardButton(
+                            text="❕Add M̶i̶s̶s̶ ̶S̶e̶r̶e̶n̶a̶ to your group",
+                            url="t.me/{}?startgroup=true".format(
+                                context.bot.username))
+                    ],
+                     [
+                         InlineKeyboardButton(
+                             text="🔮Support Group",
+                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                         InlineKeyboardButton(
+                             text="🔔Updates Channel",
+                             url="https://t.me/BotLabUpdates")
+                     ],
+                     [
+                         InlineKeyboardButton(
+                             text="📖 Getting Started Guide",
+                             url="https://t.me/BotLabUpdates/3")
+                     ],
+                     [
+                         InlineKeyboardButton(
+                             text="💾 Source Code.",
+                             url="https://github.com/darkpokefan/Ashketchum")
+                     ]]))
 
     else:
         update.effective_message.reply_text("HI, Why u summoned me")
