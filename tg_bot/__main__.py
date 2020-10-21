@@ -31,13 +31,8 @@ Hey there! My name is *{}*.
 
 I am an Anime themed group management bot with some fun extras ;)
 
-MY SUPPORT GROUP IS @anie_support
 
 You can find the list of available commands with /help
-
-Support group is [here](t.me/anie_support)
-
-
 
 """
 
