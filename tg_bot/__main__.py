@@ -41,7 +41,7 @@ MY  CHANNEL IS @anie_news
 
 """
 
-BOT_IMG = https://telegra.ph/file/332e62f26910be57ca0c1.jpg
+BOT_IMG = "https://telegra.ph/file/332e62f26910be57ca0c1.jpg"
 
 
 HELP_STRINGS = """
